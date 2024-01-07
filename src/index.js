@@ -6,12 +6,7 @@ const link = caminhoArquivo[2];
 
 fs.readFile(link, 'utf-8', (erro, texto) => {
     quebraEmParagrafos(texto);
-    // verificaPalavrasDuplicadas(texto);
 })
-
-// criar array com as palavras
-// contar as ocorrências 
-// montar um objeto com o resultado
 
 function quebraEmParagrafos(texto) {
     const paragrafos = texto.toLowerCase().split('\n');
@@ -29,7 +24,6 @@ function limpaPalavras(palavra) {
 function verificaPalavrasDuplicadas(texto) {
     const listaPalavras = texto.split(' ');
     const resultado = {};
-    // objeto[propriedade] = valor;
     listaPalavras.forEach(palavra => {
       if (palavra.length >= 3) {
         const palavraLimpa = limpaPalavras(palavra);
